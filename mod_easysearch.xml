@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5" client="administrator">
+  <name>Easy Search Module</name>
+  <author>Hiro Nozu</author>
+  <creationDate>Nov 2008</creationDate>
+  <copyright>2009 Hiro Nozu - All rights reserved.
+    <p>Adaptado para Joomla 2.5 por Uziel Almeida Oliveira- Ponto Mega
+    <br />Setembro de 2012</p></copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@easysearch.forjoomla.net</authorEmail>
+  <authorUrl>http://easysearch.forjoomla.net/</authorUrl>
+  <version>0.0.4</version>
+  <description>This module shows Easy Search component as module. Please refer http://www.openjs.com/scripts/events/keyboard_shortcuts/ about how to set the parameter "Shortcut Key" because this module uses the javascript. If you also want to know which code it is used for a specific key to set the parameter "Key Code", you can use http://www.ryancooper.com/resources/keycode.asp</description>
+  <files>
+    <filename module="mod_easysearch">mod_easysearch.php</filename>
+    <filename>index.html</filename>
+    <filename>mod_easysearch.ajax.php</filename>
+    <filename>shortcut.js</filename>
+    <filename>tmpl/default.php</filename>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+         <field name="mode" type="radio" default="1" label="Display Mode" description="If you would not like this to be displayed, choose Modal Window. If you choose Modal Window the parameter style will be ignored.">
+      <option value="1">Module</option>
+      <option value="2">Modal Window</option>
+    </field>
+    <field name="style" type="text" default="float: left; margin: 3px 3px 0;" label="Style" description="Style for module wrapper." />
+    <field name="shortcut" type="list" default="1" label="Shortcut" description="Wether to use shortcut key. This future does not work if the focus is in input area.">
+      <option value="1">ON</option>
+      <option value="0">OFF</option>
+    </field>
+    <field name="shortcut_key" type="text" default="F" label="Shortcut Key" description="Eg. Shift+F" />
+    <field name="keycode" type="text" default="70" label="Key Code" description="Key code for focusing the input box. For example, 70 is F." />
+      </fieldset>
+    </fields>
+  </config>
+  
+</extension>
